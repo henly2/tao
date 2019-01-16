@@ -541,8 +541,8 @@ func asyncWrite(c interface{}, m Message) (err error) {
 	select {
 	case sendCh <- pkt:
 		err = nil
-	default:
-		err = ErrWouldBlock
+	//default:
+	//	err = ErrWouldBlock
 	}
 	return
 }
